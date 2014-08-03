@@ -15,3 +15,16 @@ is_older() {
     test "$(find "$dirp" -maxdepth 1 -mmin +$age_threshold -name "$fp")"
     return $?
 }
+
+get_named_dir() {
+    if [ -z $1 ]
+    then
+        return 1
+    fi
+    fp="$1"
+    maxdepth=${2-'1'}
+    dirp=${3-$(pwd)}
+
+    find "$dirp" -maxdepth "$maxdepth" -type d -name "$fp" 2>/dev/null |
+        sort | head -n 1
+}
