@@ -3,4 +3,4 @@
 # This source code is released under the new BSD license.
 
 # Current working directory to clipboard
-alias cwd2clip="echo $(pwd) | xclip"
+alias cwd2clip='echo $(pwd) | xclip'
