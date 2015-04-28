@@ -1,4 +1,4 @@
-# (C) 2014, Pedro I. López <dreilopz@gmail.com>
+# (C) 2014, 2015, Pedro I. Lopez <m@lopezpedro.net>
 #
 # This source code is released under the new BSD license, a copy of the
 # license is in the distribution directory.
