@@ -4,8 +4,9 @@
 # license is in the distribution directory.
 
 get_file_extensions() {
-    find "${1-$(pwd)}" -type f -iname '*.*' | grep -iv -e '.*~' | 
-    sed -e 's/.*\.\(.*\)/\1/' -e 's/\(.*\)/\L\1/' | sort | uniq
+    find "${1-$(pwd)}" -type f -iname '*.*' | 
+        grep -iv -e '^.*~$' |  # ignore vim backups
+        sed -e 's/.*\.\(.*\)/\1/' -e 's/\(.*\)/\L\1/' | sort | uniq
 }
 
 is_older() {
