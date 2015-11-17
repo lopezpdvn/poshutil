@@ -1,6 +1,6 @@
-# (C) 2014, 2015, Pedro I. Lopez <m@lopezpedro.net>
+# (C) 2014, 2015, Pedro Ivan Lopez <m@pedroivanlopez.com>
 #
-# This source code is released under the new BSD license, a copy of the
+# This source code is released under the new MIT license, a copy of the
 # license is in the distribution directory.
 
 get_file_extensions() {
