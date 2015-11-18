@@ -28,3 +28,22 @@ get_cfg_dir() {
 
     find "$dirp" -maxdepth "$maxdepth" -type f -name "$fp" 2>/dev/null | head -n 1
 }
+
+randint() {
+    if [ -z $1 ]
+    then
+        intmax=10
+    else
+        intmax=$1
+    fi
+
+    if [ intmax -gt 10 ]; then
+        intmax=10
+    fi
+
+    randstr=$RANDOM
+    randstr=$randstr$RANDOM
+    randstr=${randstr:(-$intmax)}
+
+    echo $randstr
+}
